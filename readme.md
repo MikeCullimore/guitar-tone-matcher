@@ -1,6 +1,6 @@
 # guitar-tone-matcher
 
-Make your guitar tone sound like a given record.
+Goal: make your guitar tone sound like a given record.
 
 ## Jupyter notebook
 
@@ -12,6 +12,7 @@ jupyter-notebook
 
 ## Pipeline
 
+1. Separate the guitar track from the rest of the recording.
 1. Inputs: two audio files, one of own guitar (clean), other is target recording.
 1. Find the time window in the recording that is most closely matched by the clean signal.
 1. (Optional?) apply [dynamic time warping](https://www.audiolabs-erlangen.de/resources/MIR/FMP/C3/C3S2_DTWbasic.html) to the clean signal to correct for rhthym inaccuracies in playing.
@@ -21,6 +22,9 @@ jupyter-notebook
 
 ## Useful links
 
+* Source separation
+    * [Spleeter (Deezer)](https://www.deezer-techservices.com/solutions/spleeter/)
+    * [demucs (Facebook research)](https://github.com/facebookresearch/demucs)
 * [WaveNet](https://www.deepmind.com/blog/wavenet-a-generative-model-for-raw-audio)
 * PedalNet:
     * [repo](https://github.com/teddykoker/pedalnet)
@@ -31,6 +35,10 @@ jupyter-notebook
 
 ## TODO
 
+* Gather isolated guitar tracks for desired tones:
+    * Cream era Eric Clapton
+    * Dark Side of the Moon
+    * Jimmy Page
 * Start with simple song, clean tone, just find matching section.
 * Quantify distance between matching section and matching section.
 * Apply effect e.g. pronounced distortion, then measure distance and verify it is larger.
